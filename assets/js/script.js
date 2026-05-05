@@ -75,68 +75,20 @@
 
 
 
-// --- ACCORDION & SELECTOR START ---
+// --- VIDEO PLAY ON HOVER START ---
+        const videos = document.querySelectorAll('video');
 
-        if($('.selector__btn').length){
-            $('.selector__btn').on('click',function (){
-                if($(this).next().is(':visible')){
-                    $(this).next().slideUp(300)
-                    $(this).removeClass('_js-expand')
-                }else{
-                    $(this).next().slideDown(300)
-                    $(this).addClass('_js-expand')
-                }
-            })
-
-            $('.selector__options li').on('click', function (){
-                let liWrap = $(this).closest('.selector');
-
-                if(!liWrap.hasClass('selector_horizontal') || $(window).width() < 992){
-
-                    let thisText = $(this).text()
-                    liWrap.find('.selector__btn span').text(thisText)
-                    liWrap.find('.selector__btn').next().slideUp(300)
-                    liWrap.find('.selector__btn').removeClass('_js-expand')
-                }
-            })
-
-            $('body').on('click', function (e){
-                if($('.selector').hasClass('selector_horizontal') && $(window).width() > 991.98){
-                    return;
-                }else if(!$(e.target).closest('.selector').hasClass('selector')){
-                    $('.selector__btn').next().slideUp(300)
-                    $('.selector__btn').removeClass('_js-expand')
-                }
-            })
-        }
-
-        if($('.selector-contents-wrapper').length){
-
-            $('.toggle').on('click' ,function(e) {
-                let isOpen = 0;
-                let $this = $(this);
-                let globalWrap = $(this).closest('.content-show-hide');
-
-                if ($this.hasClass('_js-open')){
-                    isOpen = 1
-                }
-
-                globalWrap.find('.toggle').removeClass('_js-open');
-                globalWrap.find('.selector-content li').removeClass('_js-open');
-                globalWrap.find('.inner').slideUp(350);
-
-                if (isOpen === 1) {
-                    $this.removeClass('_js-open');
-                    $this.parent().removeClass('_js-open');
-                    $this.next().slideUp(350);
-                } else {
-                    $this.parent().addClass('_js-open');
-                    $this.addClass('_js-open');
-                    $this.next().slideToggle(350);
-                }
+        videos.forEach(video => {
+            video.addEventListener('mouseenter', () => {
+                video.play();
             });
-        }
-// --- ACCORDION & SELECTOR END ---
+
+            video.addEventListener('mouseleave', () => {
+                video.pause();
+            });
+        });
+
+// --- VIDEO PLAY ON HOVER END ---
 
     });
 })(jQuery);
