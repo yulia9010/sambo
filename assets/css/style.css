@@ -1061,6 +1061,14 @@ button:hover .icon-hover {
   .container-sm {
     max-width: var(--container);
   }
+
+  .fluid-offset-sm-left-1 {
+    margin-left: calc((100% - var(--container)) / 2 + var(--container) / 12 * 1);
+  }
+
+  .fluid-offset-sm-right-1 {
+    margin-right: calc((100% - var(--container)) / 2 + var(--container) / 12 * 1);
+  }
 }
 
 @media (min-width: 768px) {
@@ -1111,6 +1119,30 @@ button:hover .icon-hover {
 
   .container-lg {
     max-width: var(--container);
+  }
+
+  .offset-lg-right-1 {
+    margin-right: calc(var(--container) / 12 * 1);
+  }
+
+  .offset-lg-left-1 {
+    margin-left: calc(var(--container) / 12 * 1);
+  }
+
+  .fluid-offset-lg-left-4 {
+    margin-left: calc((100% - var(--container)) / 2 + var(--container) / 12 * 4);
+  }
+
+  .fluid-offset-lg-right-4 {
+    margin-right: calc((100% - var(--container)) / 2 + var(--container) / 12 * 4);
+  }
+
+  .col-width-lg-5 {
+    max-width: calc(var(--container) / 12 * 5);
+  }
+
+  .col-width-lg-3 {
+    max-width: calc(var(--container) / 12 * 3);
   }
 
   .hero {
@@ -1270,6 +1302,18 @@ button:hover .icon-hover {
 
   .container-xxl {
     max-width: var(--container);
+  }
+
+  .offset-xxl-left-2 {
+    margin-left: calc(var(--container) / 12 * 2);
+  }
+
+  .col-width-xxl-4 {
+    max-width: calc(var(--container) / 12 * 4);
+  }
+
+  .col-width-xxl-3 {
+    max-width: calc(var(--container) / 12 * 3);
   }
 
   .menu > li {
