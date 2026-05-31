@@ -33,10 +33,10 @@
         }
 
         menuBtn.on('click', ()=>{
-            $('.dropdown').removeClass('_js-open');
-            $('.dropdown').find('.d-menu').removeClass('_js-open');
-            $('.d-menu__dropdown').removeClass('_js-open');
-            $('.d-menu__dropdown').find('.d-menu__submenu').removeClass('_js-open');
+            toggleMobileMenu();
+        });
+
+        $('.navbar li').on('click', ()=>{
             toggleMobileMenu();
         });
 
