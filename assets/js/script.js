@@ -73,7 +73,12 @@
         /* dropdowns in mobile menu END */
 // --- mobile menu END ---
 
+// --- GALLERY FIRST ITEM ON MOBILE START ---
+        $('.box').click(function() {
+            $(this).siblings().removeClass('box__mobile');
+        });
 
+// --- GALLERY FIRST ITEM ON MOBILE END ---
 
 // --- VIDEO PLAY ON HOVER START ---
         const videos = document.querySelectorAll('video');
